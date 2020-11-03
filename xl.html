@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+  <input type="file" name="inputfile"
+  id="inputfile"> 
+<br> 
+<h3>Summary Mapping Problem description to Issue Description in Pluse</h3>
+<div id="output"></div> 
+<script type="text/javascript"> 
+document.getElementById('inputfile') 
+    .addEventListener('change', function() { 
+    var fr=new FileReader(); 
+    fr.onload=function(){ 
+        //Regex Mapping Problem Description (source) to ISSUE DEFINITION (target) 
+        /*
+        if(fr.result.search("Problem Description") !== -1 ){
+            var iStart = fr.result.search("Problem Description");
+            var iActEnd = fr.result.length;
+            var sIntSum = fr.result.slice(iStart,iEnd);
+            var iIntSum = sIntSum.search("Regard");
+            var iEnd = iIntSum + iStart;
+            if(iEnd){
+                var sProblemSummary = "++ISSUE DEFINITION++ \n  \n" + fr.result.slice(iStart,iEnd);
+                document.getElementById('output') .textContent=sProblemSummary;
+            } else {
+                var sProblemSummary = "++ISSUE DEFINITION++ \n  \n" + fr.result.slice(iStart,iActEnd);
+                document.getElementById('output') .textContent=sProblemSummary;
+            }          
+
+        } else {
+            var sProblemSummary = "++ISSUE DEFINITION++ \n  \n" + fr.result.slice(iStart,iActEnd);
+            document.getElementById('output') .textContent=sProblemSummary; 
+        }
+        */
+
+        var oD = fr.result;
+
+   var arraybuffer = oD;
+var data = new Uint8Array(arraybuffer);
+var arr = new Array();
+for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+var bstr = arr.join("");
+var workbook = XLSX.read(bstr, {type:"binary"});
+
+var first_sheet_name = workbook.SheetNames[0];
+var worksheet = workbook.Sheets[first_sheet_name];
+console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+
+    } 
+
+    fr.readAsArrayBuffer(this.files[0]);
+
+    /*
+var url = "C:\fakepath\Manage Production Orders.xlsx";
+var oReq = new XMLHttpRequest();
+oReq.open("GET", oD, true);
+oReq.responseType = "arraybuffer";
+
+oReq.onload = function(e) {
+  var arraybuffer = oReq.response;
+
+ 
+  var data = new Uint8Array(arraybuffer);
+  var arr = new Array();
+  for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+  var bstr = arr.join("");
+
+  
+  var workbook = XLSX.read(bstr, {type:"binary"});
+
+
+  var first_sheet_name = workbook.SheetNames[0];
+
+  var worksheet = workbook.Sheets[first_sheet_name];
+  console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+
+}
+
+oReq.send();
+*/
+
+}) 
+
+
+</script>
+</body>
+</html>

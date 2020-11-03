@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333
+    }
+
+    li {
+        float: center
+    }
+
+    li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none
+    }
+
+    .wrapper-scan{
+        margin-top:100px;
+        margin-left:140px;
+    }
+
+    .wrapper-scanform1{
+        margin-left:100px;
+        margin-top:20px ;
+    }
+    .wrapper-scanform2{
+        margin-left:100px;
+        margin-top:10px ;
+        margin-bottom: 200px;
+    }
+
+</style>
+
+<body>
+
+    <div class="container-fluid" style="width:1000px">
+
+        <div class="row">
+            <ul>
+                <li style=pointer-events:none;>
+                    <a style="float:left;"><i style='font-size:24px' class='fas'>&#xf7d9;</i> Station Name</a>
+                    <a style="float:right;"><i style='font-size:24px' class='far'>&#xf017;</i> Process Time - 0:00</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            
+            <div style="width:500px;height: 600px;background-color:lightgray">
+                <div class="container">
+                    <img src="./be/step3.jpg"  alt="step1" style="width:450px;height: 400px;margin-top:10px;margin-bottom: 10px;">
+
+                    <div class="wrapper-steps" style="width:470px;">
+                        <h4> Step 3 - Attach the Brake Discs</h4>
+                        <p>If you are using disc brakes, now is a good time to attach the rotors. Take care not to touch the braking surface as any oil on the brake permanently decreases its performance. Make sure that the rotor is attached in the correct direction. There are normally arrows indicating the direction the rotor will spin 
+                            when your bike is rolling forward.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper-parts" style="position: relative;">
+                <div  style="position: absolute;left:500px; top:-600px; width:200px;height: 600px;background-color:lightgray">
+                <div class="container">
+                    <div class="wrapper-parts">
+                        <h4><i style='font-size:24px' class='fas'>&#xf0ad;</i> Parts Needed</h4>
+                        <form class="form-inline" style="margin-top:10px" action="/action_page.php">
+                            <div class="form-group">
+                                <label for="porder">Frame:</label>
+                                <label for="porderv">01</label>
+                            </div>
+                        </form>
+                        <form class="form-inline"  action="/action_page.php">
+                            <div class="form-group">
+                                <label for="porder">Rotor:</label>
+                                <label for="porderv">04</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="wrapper-notes" style="margin-top:200px;">
+                        <h4><i style='font-size:24px' class='far'>&#xf044;</i>Notes</h4>
+                        <textarea class="form-control"  style="width:164px;"  rows="12"  id="comment"></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-order" style="position: relative;">
+        <div style="position: absolute;left:700px; top:-600px;width:300px;background-color:lightgray;height: 600px;">
+                <div class="container">
+                    <h4><i style='font-size:24px' class='fas'>&#xf472;</i>Order Details</h4>
+                    <img src="./be/order.png"  alt="step1" style="width:250px;height: 250px;margin-top:10px;margin-bottom: 10px;">
+                    <form class="form-inline" style="margin-top:40px" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Production Order:</label>
+                            <label for="porderv">0086734567</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Quantity:</label>
+                            <label for="porderv">01</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Product:</label>
+                            <label for="porderv">Commuter Bycycle</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Due Date:</label>
+                            <label for="porderv">18/10/2020</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Color:</label>
+                            <label for="porderv">Black</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Size:</label>
+                            <label for="porderv">80cm</label>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-group">
+                            <label for="porder">Material:</label>
+                            <label for="porderv">Aluminium</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row" >
+            <ul >
+                <li>
+                    <button type="button" style="float:left;margin:10px;" class="btn btn-primary btn-lg"><span
+                        class=""></span> Call</button>
+                        <button type="button" style="float:left;margin:10px;" class="btn btn-primary btn-lg"><span
+                            class=""></span>Report Defect</button>
+                            <button type="button" style="float:left;margin:10px;" class="btn btn-primary btn-lg"><span
+                                class=""></span><i style='font-size:24px' class='fas'>&#xf060;</i></button>
+                                <button type="button" style="float:left;margin:10px;" class="btn btn-primary btn-lg"><span
+                                    class=""></span> <i style='font-size:24px' class='fas'>&#xf061;</i></button>      
+                            <button type="button" style="float: right;margin:10px;" class="btn btn-success btn-lg"><span
+                                class="	glyphicon glyphicon-ok"></span>Complete</button>    
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

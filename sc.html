@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333
+    }
+
+    li {
+        float: center
+    }
+
+    li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none
+    }
+
+    .wrapper-scan{
+        margin-top:200px;
+        margin-left:400px;
+    }
+
+    .wrapper-scanform1{
+        margin-left:350px;
+        margin-top:20px ;
+    }
+    .wrapper-scanform2{
+        margin-left:350px;
+        margin-top:10px ;
+        margin-bottom: 200px;
+    }
+
+</style>
+
+<body>
+
+    <div class="container-fluid" style="width:1000px">
+
+
+        <div class="row">
+            <ul>
+                <li style=pointer-events:none;>
+                    
+                    <a style="float:left;"><i style='font-size:24px' class='fas'>&#xf7d9;</i> Station Name</a>
+                    <a style="float:right;"><i style='font-size:24px' class='far'>&#xf017;</i> Process Time - 0:00</a>
+                </li>
+            </ul>
+            <div class="col-md-12" style="background-color:lightgray;width:1000px ;height:700px;">
+                <div class="container">
+                    <div class="wrapper-scan">
+                        <h3>Scan for Order</h3>
+                    </div>
+                    
+                    <form class="form-inline wrapper-scanform1" action="/action_page.php">
+                        <div class="form-group">
+                            <input type="order" class="form-control" id="order" placeholder="Scan barcode"
+                                name="order">
+                            <button type="button" class="btn btn-primary"><span
+                                    class="glyphicon glyphicon-barcode"></span></button>
+                        </div>
+                    </form>
+
+                    <form class="form-inline wrapper-scanform2" action="/action_page.php">
+                        <div class="form-group">
+                            <input type="order" class="form-control" id="order" placeholder="Enter production order"
+                                name="order">
+                            <button type="button" class="btn btn-primary"><span
+                                    class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

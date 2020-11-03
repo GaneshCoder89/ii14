@@ -1,0 +1,944 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctypehtml>
+<html lang=en></html>
+<meta charset=UTF-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<link href=https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css rel=stylesheet>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js></script>
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
+<script src=index.js></script>
+<title>Document</title>
+<style>
+	.carousel-item {
+		height: 65vh;
+		min-height: 350px;
+		background: no-repeat center center scroll;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover
+	}
+
+	.features-icons {
+		padding-bottom: 7rem
+	}
+
+	.text-center {
+		text-align: center!important
+	}
+
+	.bg-light {
+		background-color: #f8f9fa!important
+	}
+
+	.container {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto
+	}
+
+	.row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px
+	}
+
+	.features-icons .features-icons-item {
+		max-width: 20rem
+	}
+
+	.mx-auto {
+		margin-left: auto!important
+	}
+
+	.mr-auto,.mx-auto {
+		margin-right: auto!important
+	}
+
+	.mb-5,.my-5 {
+		margin-bottom: 3rem!important
+	}
+
+	.features-icons .features-icons-item .features-icons-icon {
+		height: 7rem
+	}
+
+	.wrapper-vendor {
+		margin-top: 20px
+	}
+
+	.d-flex {
+		display: -ms-flexbox!important;
+		display: flex!important
+	}
+
+	.features-icons .features-icons-item .features-icons-icon i {
+		font-size: 4.5rem
+	}
+</style>
+<nav class="bg-dark fixed-top navbar navbar-dark navbar-expand-lg">
+	<div class=container>
+		<a class=navbar-brand href=#>CustomRapid</a>
+		<button class=navbar-toggler type=button data-target=#navbarResponsive data-toggle=collapse aria-controls=navbarResponsive aria-expanded=false aria-label="Toggle navigation">
+			<span class=navbar-toggler-icon></span>
+		</button>
+		<div class="collapse navbar-collapse" id=navbarResponsive>
+			<ul class="ml-auto navbar-nav">
+				<li class="nav-item active">
+					<a class=nav-link href=#>
+						Home <span class=sr-only>(current)</span>
+					</a>
+				<li class=nav-item>
+					<a class=nav-link href=#>About</a>
+				<li class=nav-item>
+					<a class=nav-link href=#>Services</a>
+				<li class=nav-item>
+					<a class=nav-link href=#>Contact</a>
+			</ul>
+		</div>
+	</div>
+</nav>
+<header>
+	<div class="carousel slide" id=carouselExampleIndicators data-ride=carousel>
+		<div class=carousel-inner role=listbox>
+			<div class="active carousel-item" style=background-image:url(images/black.jpg)>
+				<div class="carousel-caption d-md-block d-none">
+					<h3 class=display-4>CustomRapid</h3>
+					<p class=lead>Digitalize your manufacturing shopfloor with clicks</p>
+					<button class="btn btn-primary" type=button data-target=#createProject data-toggle=modal>Get Started</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="bg-light features-icons text-center">
+	<div class=container>
+		<div class=row>
+			<div class=col-lg-4>
+				<div class="features-icons-item mb-lg-3 mx-auto mb-5 mb-lg-0">
+					<div class="d-flex features-icons-icon">
+						<i class="m-auto material-icons text-primary">block</i>
+					</div>
+					<h4>No Code</h4>
+					<p class="lead mb-0">Allows Engineers, Supervisors & Admins from manufacturing factory to build app from sources like ERP, spreadsheet & cloudsheets.
+				</div>
+			</div>
+			<div class=col-lg-4>
+				<div class="features-icons-item mb-lg-3 mx-auto mb-5 mb-lg-0">
+					<div class="d-flex features-icons-icon">
+						<i class="m-auto material-icons text-primary">devices</i>
+					</div>
+					<h4>All Devices</h4>
+					<p class="lead mb-0">Supports multi platforms Web, Android and iOS
+				</div>
+			</div>
+			<div class=col-lg-4>
+				<div class="mb-0 features-icons-item mb-lg-3 mx-auto">
+					<div class="d-flex features-icons-icon">
+						<i class="m-auto material-icons text-primary">business</i>
+					</div>
+					<h4>Manufacturing Business Templates</h4>
+					<p class="lead mb-0">Provide multiple business templates for building Apps to cater daily shopfloor needs
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class=modal id=createProject>
+	<div class=modal-dialog>
+		<div class=modal-content>
+			<div class=modal-header>
+				<h4 class=modal-title>Create App</h4>
+				<button class=close type=button data-dismiss=modal>×</button>
+			</div>
+			<div class=modal-body>
+				<div class=form-group>
+					<label for=usr>App Name:</label>
+					<input class=form-control id=prN placeholder="Enter app name...">
+				</div>
+				<div class="container">
+					<p style="font-weight: bold;">Business Templates:</p>
+					<form action="/action_page.php">
+						<div class="form-check">
+							<label class="form-check-label" for="check2">
+								<input class=form-check-input onclick="clickWorkTemp()"  type=checkbox >Work instruction & completion tracking
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" disabled>Inspection & quality checks
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" disabled>Operator training
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" disabled>Machine monitoring
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" disabled>Auditing
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="check1">
+								<input type="checkbox" class="form-check-input" disabled>Production Dashboard
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<p style="margin-top: 10px;font-weight: bold;">Build from Scratch:</p>
+					<form >
+						<div class="form-check">
+							<label class="form-check-label" for="check8">
+
+								<input class=form-check-input id=check1 type=checkbox name=option1 onclick=ShowERP() value=something disabled>Build from idea
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="container">
+					<p style="margin-top: 10px;font-weight: bold;">External Sources:</p>
+					<form action="/action_page.php">
+						<div class="form-check">
+							<label class="form-check-label" for="check1">
+								<input class=form-check-input id=check7 type=checkbox name=option2
+								       onclick=ShowExcel() value=something>Excel
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="check6">
+								<input type="checkbox" class="form-check-input" disabled>Google Sheets
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class=wrapper-erpBlock id=erp style=display:none>
+					<div class=form-group>
+						<label style="margin-top: 10px;" for=usr>Enter the business process:</label>
+						<div class="input-group mb-3">
+							<input class=form-control id=bp placeholder=Search>
+							<div class=input-group-append>
+								<button class="btn btn-primary" type=submit onclick=ShowAPI()>Go</button>
+							</div>
+						</div>
+					</div>
+					<div class=wrapper-API id=api style=visibility:hidden>
+						<div class=container>
+							<p>Available APIs (Out of the Box integration to SAP Manufacturing & Production Engineering):
+							<form>
+								<div class=form-check>
+									<label for=check1 class=form-check-label>
+										<input class=form-check-input type=checkbox  value=something>Production Order
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=modal-footer>
+				<button class="btn btn-primary" type=button data-dismiss=modal data-toggle="modal" data-target="#FieldMapModal" id=btnUpd  style=display:none>Submit</button>
+				<button class="btn btn-primary" type=button data-dismiss=modal id=btnAPI onclick='window.location.href="landingPage.html"'>Submit</button>
+				<button class="btn btn-primary" type=button data-dismiss=modal>Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- The FieldModal -->
+<div class="modal" id="FieldMapModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Field Mapping</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<div class="container">
+					<ul class="list-group" style="width:400px">
+						<li class="list-group-item list-group-item-secondary"> Fields used from Production Order object from ERP</li>
+						<li class="list-group-item list-group-item">Production Order</li>
+						<li class="list-group-item list-group-item">Product description</li>
+						<li class="list-group-item list-group-item">Quantity</li>
+						<li class="list-group-item list-group-item">Due Date</li>
+						<li class="list-group-item list-group-item">Color</li>
+						<li class="list-group-item list-group-item">Size</li>
+						<li class="list-group-item list-group-item">Material</li>
+					</ul>
+				</div>
+
+				<div class="container">
+					<ul class="list-group" style="width:400px; margin-top:10px">
+						<li class="list-group-item list-group-item-secondary">Fields needed in the Excel</li>
+						<li class="list-group-item list-group-item">Steps</li>
+						<li class="list-group-item list-group-item">Main Activity</li>
+						<li class="list-group-item list-group-item">Description</li>
+						<li class="list-group-item list-group-item">Parts Used</li>
+						<li class="list-group-item list-group-item">PartQuantity</li>
+						<li class="list-group-item list-group-item">Base part</li>
+						<li class="list-group-item list-group-item">BaseQuantity</li>
+						<li class="list-group-item list-group-item">Image</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" onclick=onSUp()>Confirm</button>
+			</div>
+
+		</div>
+	</div>
+</div>

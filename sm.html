@@ -1,0 +1,1071 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+	<title>DisplayCo</title>
+	<script id="sap-ui-bootstrap"
+	        type="text/javascript"
+	        data-sap-ui-libs="sap.m, sap.ui.comp"
+	        data-sap-ui-theme="sap_belize_plus"
+	        data-sap-ui-compatVersion="edge"
+	        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js">
+	</script>
+
+	<script id="mainView" type="sapui5/xmlview">
+                <core:View xmlns:core="sap.ui.core" controllerName="mainView.controller"
+					xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartchart="sap.ui.comp.smartchart"
+						xmlns:sl="sap.ui.comp.navpopover"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+						xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield"
+						
+						xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" height="100%">
+						<Page id="page" title="Manage Production Orders">
+							<VBox>
+								 <smartchart:SmartChart entitySet="ProductionOrderCollection" enableAutoBinding="true"
+											 useVariantManagement="false">
+								 </smartchart:SmartChart>
+							</VBox>
+						</Page>
+                </core:View>
+</script>
+	<script id="metadata" type="text/xmldata"><?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+	xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="EPM_DEVELOPER_SCENARIO_SRV"
+			sap:schema-version="0" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ProductionOrder" sap:service-schema-version="1"
+				sap:service-version="1" sap:semantics="aggregate"
+				sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Order" />
+				</Key>
+				<Property Name="Order" Type="Edm.String" Nullable="false"
+					MaxLength="10" sap:aggregation-role="dimension" sap:label="Order"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="Material" Type="Edm.String" Nullable="false"
+					MaxLength="40" sap:aggregation-role="dimension" sap:label="Material"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="OpenQuantity" Type="Edm.String" Nullable="false"
+					MaxLength="255" sap:aggregation-role="dimension" sap:label="Open Quantity"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="Status" Type="Edm.String" Nullable="false"
+					MaxLength="255" sap:aggregation-role="dimension" sap:label="Status"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="Start" Type="Edm.String" Nullable="false"
+					MaxLength="80" sap:aggregation-role="dimension" sap:label="Start"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="End" Type="Edm.String" Nullable="false"
+					MaxLength="80" sap:aggregation-role="dimension" sap:label="End"
+					sap:sortable="true" sap:filterable="true" />	
+				<Property Name="POO" Type="Edm.Decimal" Nullable="false"
+					MaxLength="3" sap:aggregation-role="measure" sap:label="Progress of Operation"
+					sap:sortable="true" sap:filterable="true" />	
+				<Property Name="Issues" Type="Edm.String" Nullable="false"
+					MaxLength="80" sap:aggregation-role="dimension" sap:label="Issues"
+					sap:sortable="true" sap:filterable="true" />
+				<Property Name="StorageLocation" Type="Edm.String" Nullable="false"
+					MaxLength="80" sap:aggregation-role="dimension" sap:label="Storage Location"
+					sap:sortable="true" sap:filterable="true" />
+
+			</EntityType>
+			<EntityContainer Name="EPM_DEVELOPER_SCENARIO_SRV"
+				m:IsDefaultEntityContainer="true">
+				<EntitySet Name="ProductionOrderCollection" EntityType="EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1" />
+			</EntityContainer>
+			<Annotations Target="EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.UI.v1.Chart">
+					<Record>
+						<PropertyValue Property="ChartType"
+							EnumMember="com.sap.vocabularies.UI.v1.ChartType/Column" />
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>Order</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>POO</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder/Order"
+				xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject"
+					String="demokit_personalization_example9_SemanticObjectName" />
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
+</script>
+	
+	<script id="dataSection" type="text/json">
+	{"d": {
+		"__count": "10",
+		"results": [
+				{
+					"__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100151')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100151", "Material": "Chillers", "OpenQuantity": "1", "Status": "Created", "Start": "", "End": "", "POO": "0", "Issues": "", "StorageLocation": "1"
+				},
+				
+				{ "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100152')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+				"Order": "10100152", "Material": "Air handling Unit", "OpenQuantity": "1", "Status": "Completed", "Start": "Mon Aug 11 2020 10:55:41", "End": "Mon Aug 12 2020 11:55:41", "POO": "100", "Issues": "", "StorageLocation": "1" },
+{  "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100153')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100153", "Material": "Chillers", "OpenQuantity": "2", "Status": "In process", "Start": "Mon Aug 11 2020 07:55:41", "End": "", "POO": "50", "Issues": "", "StorageLocation": "1" },
+{ "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100154')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100154", "Material": "Condensing Units", "OpenQuantity": "1", "Status": "In process", "Start": "Mon Aug 12 2020 10:55:41", "End": "", "POO": "60", "Issues": "", "StorageLocation": "1" },
+{  "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100155')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100155", "Material": "Split Units", "OpenQuantity": "3", "Status": "Completed", "Start": "Mon Aug 11 2020 07:55:41", "End": "Mon Aug 11 2020 16:00:00", "POO": "100", "Issues": "", "StorageLocation": "1" },
+{  "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100156')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100156", "Material": "Fan Coil Units", "OpenQuantity": "5", "Status": "Created", "Start": "", "End": "", "POO": "0", "Issues": "", "StorageLocation": "1" },
+{"__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100157')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100157", "Material": "Fan Coil Units", "OpenQuantity": "2", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "POO": "70", "Issues": "", "StorageLocation": "1" },
+{ "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100158')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100158", "Material": "Split Units", "OpenQuantity": "1", "Status": "In process", "Start": "Mon Aug 14 2020 10:55:41", "End": "", "POO": "70", "Issues": "", "StorageLocation": "1" },
+{ "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100159')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100159", "Material": "Air handling Unit", "OpenQuantity": "1", "Status": "Created", "Start": "", "End": "", "POO": "0", "Issues": "", "StorageLocation": "1" },
+{ "__metadata": { "uri": "testService.ProductionOrderCollection/ProductionOrder('10100160')", "type": "EPM_DEVELOPER_SCENARIO_SRV.ProductionOrder" },
+"Order": "10100160", "Material": "Air handling Unit", "OpenQuantity": "1", "Status": "In process", "Start": "Mon Aug 15 2020 10:55:41", "End": "", "POO": "80", "Issues": "", "StorageLocation": "1" }
+				
+				
+			]
+	}}</script>
+
+	<script>
+		sap.ui.controller("mainView.controller", {
+			onInit : function() {
+                this.getView().setBusy(true);
+				  // create some local data
+			var oModel, oView;
+				var sServiceName = "testService";
+
+				setupMockserver(sServiceName);
+
+				jQuery.sap.require("sap.ui.model.odata.v2.ODataModel");
+				var oModel = new sap.ui.model.odata.v2.ODataModel(sServiceName +"/", {
+					useBatch: false
+				});
+
+				oView = this.getView();
+				oView.setModel(oModel);
+
+				var smartChart = oView.byId("smartChartGeneral");
+				//oModel.getMetaModel().loaded().then(function() {
+				//	smartForm.bindElement("/Employees('0001')");
+				//});
+               
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
+			},
+			onExit: function() {
+				this._oMockServer.stop();
+			}
+		});
+
+
+		/** Component **/
+
+		jQuery.sap.declare("mainView.Component");
+		sap.ui.core.UIComponent.extend("mainView.Component", {
+			createContent: function() {
+				var app = new sap.m.App({
+					initialPage: "idView"
+				});
+				var oView = sap.ui.xmlview("idView", { viewContent: jQuery("#mainView").html() });
+				app.addPage(oView);
+				return app;
+			}
+		});
+
+		new sap.ui.core.ComponentContainer({
+			name : "mainView"
+		}).placeAt("content")
+	</script>
+
+	<script>
+		/*** MockServer related code ***/
+		function setupMockserver(service) {
+			var basePath = service;
+
+			jQuery.sap.require('sap.ui.core.util.MockServer');
+			var mockServer = new sap.ui.core.util.MockServer({
+				rootUri: basePath
+			});
+
+			var reqList = mockServer.getRequests();
+
+			// $metadata
+			reqList.push({
+				method: 'GET',
+				path: '/\\$metadata(.*)',
+				response: function(req, resp) {
+					var data = jQuery("#metadata").html();
+					req.respondXML(200, {}, data);
+				}
+			});
+
+			// Data
+			reqList.push({
+				method: 'GET',
+				path: '/\\ProductionOrderCollection(.*)',
+				response: function(req, resp) {
+					var data = jQuery("#dataSection").html();
+					req.respondJSON(200, {}, data);
+				}
+			});
+			mockServer.setRequests(reqList);
+			mockServer.simulate(basePath + '/$metadata', {
+                                                sMockdataBaseUrl: basePath + '/ProductionOrderCollection',
+                                                bGenerateMissingMockData: true
+                                });
+			mockServer.start();
+		};
+
+	</script>
+</head>
+
+<body class='sapUiBody'>
+<div id='content'></div>
+</body>
+</html>

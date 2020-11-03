@@ -1,0 +1,762 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+
+    <title>List App</title>
+
+    <script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+        data-sap-ui-theme='sap_belize_plus' data-sap-ui-libs='sap.m' data-sap-ui-compatVersion='edge'></script>
+
+    <script id="myXml" type="text/xmldata">
+			<mvc:View controllerName="myController" xmlns:fb="sap.ui.comp.filterbar" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="List View">
+					<content>
+						<l:VerticalLayout width="100%">
+							<fb:FilterBar reset="onReset" id="idfilter"
+								search="onSearch"
+								showRestoreButton="true"
+								showClearButton="true">
+							</fb:FilterBar>
+						</l:VerticalLayout>
+
+						<Table id="idTableUp">
+										<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<Title text="Items"
+											level="H2" />
+										<ToolbarSpacer />
+										<Button text="Add" type="Emphasized" enabled="false"/>
+										<Button text="Edit" type="Emphasized" enabled="false" />
+										<Button text="Delete"
+											type="Emphasized" enabled="false" />
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+		</script>
+
+    <script>
+        sap.ui.controller("myController", {
+            onInit: function () {
+
+				var aDo = JSON.parse(localStorage.aDxl);
+				this.getView().setBusy(true);
+				                
+								var aData =  aDo;
+				
+				var oT = this.getView().byId("idTableUp");
+				var oF = this.getView().byId("idfilter");
+				var aC = [], oX;
+				// for ( var i = 0; i < aData.length; i++) {
+					if(aData.length !== 0){
+
+					for ( var j = 0; j < Object.keys(aData[0]).length; j++) { 
+                   oT.addColumn(new sap.m.Column({minScreenWidth:"Tablet", demandPopin:true, header: new sap.m.Text({text:Object.keys(aData[0])[j]})}));
+				   oF.addFilterItem(new sap.ui.comp.filterbar.FilterItem({name:j+"ch", label:Object.keys(aData[0])[j], control : new sap.m.Input()}));
+					} 
+				// }
+				     for ( var i = 0; i < Object.keys(aData[0]).length; i++) {
+						 oX = new sap.m.Text({text: "{" +Object.keys(aData[0])[i]+ "}"});
+						 aC.push(oX);
+					 }
+									 
+				oT.bindItems({
+					path : "/",
+					template : new sap.m.ColumnListItem({
+						cells: aC
+					})
+				});
+										
+				}
+				
+                var oModel = new sap.ui.model.json.JSONModel();
+                oModel.setData(aData);
+                oT.setModel(oModel);
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
+			},
+            onSearch: function () {
+            }
+        });
+        sap.ui.xmlview({ viewContent: jQuery('#myXml').html() }).placeAt("content");
+    </script>
+</head>
+<body id='content' class='sapUiBody'>
+</body>
+
+</html>

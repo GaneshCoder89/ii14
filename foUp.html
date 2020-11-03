@@ -1,0 +1,428 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta charset="utf-8">
+
+		<title>Form</title>
+
+		<script id='sap-ui-bootstrap' src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+        data-sap-ui-theme='sap_belize_plus' data-sap-ui-libs='sap.m' data-sap-ui-compatVersion='edge'></script>
+
+    <script id="myXml" type="text/xmldata">
+			<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" 	xmlns:core="sap.ui.core" controllerName="myController" displayBlock="true">
+				<App>
+					<Page title="Machine Maintenance Form">
+							<customHeader>
+			<Bar>
+				<contentRight>
+					<Button id="save" text="Save" type="Emphasized"  press="handleSavePress" />
+					<Button id="cancel" text="Cancel"  press="handleCancelPress" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+							<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Create Machine maintenance request"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Machine Id" />
+				<Input  value="{}" width="50%"/>
+				<Label text="Machine Name" />
+				<Input  value="{}" width="50%"/>
+				<Label text="Assigned To" />
+				<Input value="{}" width="50%"/>
+				<Label text="Status" />
+				<Select  selectedKey="{status}"  width="50%">
+					<items>
+						<core:Item text="Created" key="Created"/>
+					</items>
+				</Select>
+				<Label text="Start" />
+						<DatePicker
+			 width="50%"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"
+			showFooter="true"/>
+				<Label text="End" />
+						<DatePicker
+			 width="50%"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"
+			showFooter="true"/>
+				<Label text="Issues" />
+				<Input value="{}" width="50%"/>
+				<Label text="Location" />
+				<Input value="{}" width="50%"/>
+
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+					</Page>
+				</App>
+			</mvc:View>
+		</script>
+
+		<script>
+			sap.ui.controller("myController", {
+				onInit: function() {
+					this.getView().setBusy(true);
+				},
+				onAfterRendering: function() {
+				this.getView().setBusy(false);
+			}
+			});
+			sap.ui.xmlview({ viewContent: jQuery('#myXml').html() }).placeAt("content");
+		</script>
+
+	</head>
+	<body id='content' class='sapUiBody'>
+	</body>
+</html>
